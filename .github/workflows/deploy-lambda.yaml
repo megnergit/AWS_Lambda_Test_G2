@@ -1,0 +1,34 @@
+name: Deploy Lambda
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.GURITOGURA }}
+          aws-secret-access-key: ${{ secrets.GURITOGURATOOKYAKUSAMA }}
+          aws-region: ${{secrets.REGION}}
+
+      - name: Install dependencies (if any)
+        run: sudo apt-get install zip
+
+      - name: Zip Lambda function and upload to S3
+        run: |
+          zip lambda_function.zip lambda_test1.py
+
+      - name: Deploy CloudFormation Stack
+        run: |
+          aws lambda update-function-code \ 
+            --function-name TestLambdaFunction \
+            --zip-file fileb://lambda_function.zip \
+            --region ${{secrets.REGION}}

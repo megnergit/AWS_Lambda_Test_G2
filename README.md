@@ -1,18 +1,17 @@
-# GitHub Actions with CloudFormation
+# Deploy Lambda Function using GitHub Actions and CloudFormation
 
 ## Motivation
 
-Test CloudFormation with GitHub Actions.
+Test deployment of Lamdba function via GitHub Actions and AWS CloudFormation.
 
 ## Summary
 
-1. Create an IAM user for management.
-   - Set up authentication app for single sign-on.
-   - Log in from aws cli.
-   
-2. Edit CloudFormation template file.
+1. Edit CloudFormation template file.
 
-3. Test if CloudFormation works from aws cli.
+2. Prepare simple python function.
+   - zip the file.
+
+3. Test python function using aws cli. 
 
 4. Edit GitHub Action deployment file
    - set up a new GitHub repo. 
