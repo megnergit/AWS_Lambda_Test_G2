@@ -24,11 +24,12 @@ jobs:
 
       - name: Zip Lambda function and upload to S3
         run: |
-          zip lambda_function.zip lambda_test1.py
+          zip lambda_test1.zip lambda_test1.py
 
-      - name: Deploy CloudFormation Stack
+      - name: Deploy Lambda Function
         run: |
-          aws lambda update-function-code \ 
+          aws lambda create-function \ 
             --function-name TestLambdaFunction \
-            --zip-file fileb://lambda_function.zip \
+            --runtime python3.13 \
+            --zip-file fileb://lambda_test1.zip \
             --region ${{secrets.REGION}}
