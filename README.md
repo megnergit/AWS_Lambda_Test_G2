@@ -6,7 +6,10 @@ Test deployment of Lamdba function via GitHub Actions and AWS CloudFormation.
 
 ## Summary
 
-1. Edit CloudFormation template file.
+1. login via sso
+
+
+1. first test from aws cli
 
 2. Prepare simple python function.
    - zip the file.
