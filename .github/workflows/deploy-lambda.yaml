@@ -30,6 +30,7 @@ jobs:
         run: |
           aws lambda create-function \ 
             --function-name TestLambdaFunction \
-            --runtime python3.13 \
+            --runtime python3.9 \
             --zip-file fileb://lambda_test1.zip \
+            --handler lambda_test1.handler \
             --region ${{secrets.REGION}}
