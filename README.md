@@ -61,7 +61,7 @@ aws iam create-role \
     --assume-role-policy-document file://trust-policy.json
 ```
 
-```trust-policy.json ``` is so that Lambda Fucntion can 
+```trust-policy.json ``` is so that Lambda Function can 
 use (=assume) this role. 
 
 Attach AWSLambdaBasicExecutionRole policy to the role.
@@ -161,24 +161,28 @@ All right.
 
 ### Test Lambda function working
 
-
 ```
 aws lambda invoke --function-name TestLambdaFunction  \
   --cli-binary-format raw-in-base64-out \
   --payload file://event.json  output.json
 ```
 
+Check if the output is correct.
 
+```
+$ cat output.json
+{"statusCode": 200, "body": "Hi me, hello from Lambda. It is cold! today.", "event": "{'name': 'me', 'weather': 'cold!'}", "context": .....
 
+}
+```
+All right.
 
 ### Make sure to DISABLE GitHub Actions
 
 Otherwise I will forget it and update README.md and 
 create AWS resources without noticing it. 
 
-
 ![disable-actions-1.png](./images/disable-actions-1.png)
-
 
 
 
