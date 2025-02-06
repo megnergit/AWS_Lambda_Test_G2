@@ -142,7 +142,13 @@ Check it on the console.
 First add a few lines in the policy that the user 
 ```github-actions-deployer``` used. 
 
-
+```
+        {
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::*******:role/TestLambdaExecutionRole"
+        },
+```        
 
 Prepare GitHub Actions workflow file  at ```./.github/workflows/deploy-lambda.yaml```.
 Make sure you create GitHub secrets beforehand. [See](https://github.com/megnergit/AWS_GitHub_Actions_Test_G1).
