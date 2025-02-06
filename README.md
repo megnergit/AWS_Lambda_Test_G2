@@ -51,12 +51,8 @@ zip lambda_test1.zip lambda_test1.py
 
 ### Create an IAM role to create and execute Lambda Function 
 
-We need an IAM role to create and execute Lambda Function 
-(In case we use GitHub Actions, we can simply add a few permissions to 
-github-actions-deployer user that we created in [my other repo](https://github.com/megnergit/AWS_GitHub_Actions_Test_G1), but 
-here we will test Lambda without GitHub Actions).
-
-We just need following procedures. IAM role itself does not cost. 
+We need an IAM role to create and execute Lambda Function. 
+An IAM role itself does not cost. 
 
 First, create an role TestLambdaExecutionRole.
 ```
@@ -142,23 +138,6 @@ aws lambda delete-function --function-name TestLambdaFunction
 Check it on the console. 
 
 ### Deploy Lambda Function via GitHub Actions
-
-First add a few lines to the user 'github-actions-deployer' that we created in the 
-[repo](https://github.com/megnergit/AWS_GitHub_Actions_Test_G1).
-
-```
-		{
-			"Effect": "Allow",
-			"Action": [
-				"lambda:CreateFunction",
-				"lambda:UpdateFunctionCode",
-				"lambda:UpdateFunctionConfiguration",
-				"lambda:GetFunction",
-				"lambda:DeleteFunction"
-			],
-			"Resource": "arn:aws:lambda:*:*:function:*"
-		},
-```
 
 Prepare GitHub Actions workflow file  at ```./.github/workflows/deploy-lambda.yaml```.
 Make sure you create GitHub secrets beforehand. [See](https://github.com/megnergit/AWS_GitHub_Actions_Test_G1).
