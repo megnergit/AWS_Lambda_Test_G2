@@ -29,7 +29,7 @@ jobs:
       - name: Deploy Lambda Function
         run: |
           aws lambda create-function \
-            --function-name TestLambdaFunction 
+            --function-name TestLambdaFunction \
             --role ${{ secrets.LAMBDA_EXECUTION_ROLE }} \
             --runtime python3.9 \
             --zip-file fileb://lambda_test1.zip \
