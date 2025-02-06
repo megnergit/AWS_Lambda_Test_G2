@@ -156,12 +156,13 @@ First add a few lines to the user 'github-actions-deployer' that we created in t
 				"lambda:GetFunction",
 				"lambda:DeleteFunction"
 			],
-			"Resource": "arn:aws:lambda:*:058264507943:function:*"
+			"Resource": "arn:aws:lambda:*:*:function:*"
 		},
 ```
 
 Prepare GitHub Actions workflow file  at ```./.github/workflows/deploy-lambda.yaml```.
 Make sure you create GitHub secrets beforehand. [See](https://github.com/megnergit/AWS_GitHub_Actions_Test_G1).
+You might need update arn of the role TestLambdaFunction.
 
 Then, push the updated files. 
 
