@@ -147,6 +147,11 @@ Then, push the updated files.
 
 
 
+### Make sure to DISABLE GitHub Actions
+
+Otherwise I will forget it and update README.md and 
+create AWS resources without noticing it. 
+
 
 
 
