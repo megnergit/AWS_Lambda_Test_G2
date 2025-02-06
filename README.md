@@ -155,12 +155,29 @@ You might need update arn of the role TestLambdaFunction.
 
 Then, push the updated files. 
 
+![completed-1.png](./images/completed-1.png)
+
+All right. 
+
+### Test Lambda function working
+
+
+```
+aws lambda invoke --function-name TestLambdaFunction  \
+  --cli-binary-format raw-in-base64-out \
+  --payload file://event.json  output.json
+```
+
+
 
 
 ### Make sure to DISABLE GitHub Actions
 
 Otherwise I will forget it and update README.md and 
 create AWS resources without noticing it. 
+
+
+![disable-actions-1.png](./images/disable-actions-1.png)
 
 
 

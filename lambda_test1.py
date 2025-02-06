@@ -4,7 +4,7 @@ def handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': f"Hi {name}, hello from Lambda. It is {weather} today."
+        'body': f"Hi {name}, hello from Lambda. It is {weather} today.",
          'event': f'{event}',
          'context': f'{context}' 
     }
