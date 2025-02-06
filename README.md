@@ -139,6 +139,11 @@ Check it on the console.
 
 ### Deploy Lambda Function via GitHub Actions
 
+First add a few lines in the policy that the user 
+```github-actions-deployer``` used. 
+
+
+
 Prepare GitHub Actions workflow file  at ```./.github/workflows/deploy-lambda.yaml```.
 Make sure you create GitHub secrets beforehand. [See](https://github.com/megnergit/AWS_GitHub_Actions_Test_G1).
 You might need update arn of the role TestLambdaFunction.
