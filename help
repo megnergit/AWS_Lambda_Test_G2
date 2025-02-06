@@ -1,0 +1,1 @@
+{"errorMessage": "Syntax error in module 'lambda_test1': invalid syntax (lambda_test1.py, line 8)", "errorType": "Runtime.UserCodeSyntaxError", "requestId": "", "stackTrace": ["  File \"/var/task/lambda_test1.py\" Line 8\n             'event': f'{event}',\n"]}
