@@ -1,27 +1,38 @@
-# Deploy Lambda Function using GitHub Actions and CloudFormation
+# Deploy Lambda Function with GitHub Actions and CloudFormation
 
 ## Motivation
 
-Test deployment of Lamdba function via GitHub Actions and AWS CloudFormation.
+We will test the deployment of Lamdba function via GitHub Actions and
+AWS CloudFormation.
 
-## Summary
+## Overview
 
-1. login via sso
-
-
-1. first test from aws cli
+1. Log in AWS via sso.
 
 2. Prepare simple python function.
-   - zip the file.
 
-3. Test python function using aws cli. 
+3. Create an IAM user for Lambda.
 
-4. Edit GitHub Action deployment file
-   - set up a new GitHub repo. 
+4. Test Lambda function from aws cli.
 
-5. Create an IAM user for the deployment.
+3. Create an IAM user for the deployment.
 
-* profile
+6. Edit GitHub Action deployment file
+
+
+## Procedure
+
+### Log in AWS via sso
+
+```
+aws login sso
+```
+Set [$AWS_PROFILE](https://docs.aws.amazon.com/ja_jp/cli/v1/userguide/cli-configure-envvars.html)
+so that we do not need to attach '--profile XXXX' everytime we execute aws cli.
+
+### Log in AWS via sso
+
+
 
 
 <!-- ------------------------------  -->
@@ -29,4 +40,3 @@ Test deployment of Lamdba function via GitHub Actions and AWS CloudFormation.
 # END
 
 <!-- ####################  -->
-# AWS_Lambda_Test_G2
