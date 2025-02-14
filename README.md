@@ -194,7 +194,3 @@ create AWS resources without noticing it.
 
 <!-- ####################  -->
 
-
-Vielen Dank, Kevin! Ich hatte ehrlich gesagt nicht erwartet, eine Antwort zu bekommen! (Das ist normalerweise im Bewerbungsprozess so...)
-
-Ich verstehe es vollkommen. Nochmals vielen Dank für die Klarstellung und Ihnen noch einen schönen Tag!
